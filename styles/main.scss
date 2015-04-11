@@ -1,0 +1,180 @@
+@import 'bourbon/bourbon';
+$visual-grid: true;
+@import 'neat/neat';
+@import 'grid-settings';
+$tablet: new-breakpoint(max-width 840px 8);
+$mobile: new-breakpoint(max-width 500px 4);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url("../styles/imgs/stars.jpeg");
+  background-size: cover; */
+  background-color: #fff;
+}
+
+
+//////////////////////Header//////////////////////
+.header {
+  background-image: url("../styles/imgs/sapien.jpg");
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+  @include span-columns(12);
+/*   @include shift(1);
+ */  clear: both;
+ box-shadow: 2px 2px black;
+
+}
+
+.header-words {
+  padding-top: 70px;
+  padding-left: 5px;
+  color: white;
+  font-family: 'Lato', sans-serif;
+  font-size: 100px;
+  text-shadow: 1px 1px black;
+
+}
+
+.button-div {
+  padding-top: 94px;
+  width: 500px;
+  margin: 0 auto;
+  @include span-columns(8);
+}
+
+.nav-buttons {
+  font-family: 'Roboto Condensed', sans-serif;
+  border: solid white 2px;
+  display: inline;
+  font-size: 30px;
+  color: white;
+  display: inline-block;
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 7px;
+  text-shadow: 1px 1px black;
+  box-shadow: 1px 1px black;
+}
+
+
+//////////////////////Bio//////////////////////
+
+.bio {
+  width: 100%;
+/*   height: 450px;*/
+  color: #402613;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 35px;
+  @include span-columns(10);
+/*   @include shift(1); */
+  display: block;
+  padding-bottom: 20px;
+  height: inherit;
+  }
+
+.bio-words {
+  @include span-columns(8);
+  padding-top: 50px;
+  font-size: 25px;
+}
+
+.bio-pic {
+  @include span-columns(3);
+  margin: 0 auto;
+  background-image: url('../styles/imgs/bigfoot.jpg');
+  background-size: 100% 100%;
+  width: 300px;
+  height: 300px;
+}
+
+//////////////////////Projects//////////////////////
+.project-display {
+  /*   background-color: #272727;
+ */
+  height: 450px;
+  color: #402613;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 35px;
+  @include span-columns(10);
+/*   @include shift(1);
+ */  height: inherit;
+  padding-bottom: 20px;
+  }
+
+  .project-display h1 {
+    padding-bottom: 20px;
+    @include span-columns(12);
+  }
+
+.fescue {
+  @include span-columns(12);
+}
+
+.fescue-img {
+  background-image: url("../styles/imgs/Port-fescue.png");
+  background-size: 100% 100%;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  @include span-columns(3);
+}
+
+.fescue-words {
+  font-size: 25px;
+  @include span-columns(4);
+}
+
+.surf {
+  @include span-columns(12);
+  padding-top: 20px;
+}
+
+.img-div {
+  @include span-columns(4);
+
+}
+.surf-img {
+  background-image: url("../styles/imgs/port-surfpaddle.png");
+  background-size: 100% 100%;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto;
+  @include span-columns(3);
+}
+
+.surf-words {
+  font-size: 25px;
+  @include span-columns(3);
+}
+
+
+//////////////////////Contact//////////////////////
+
+.contact {
+  width: 100%;
+  height: 450px;
+  color: #402613;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 35px;
+  @include span-columns(10);
+/*   @include shift(1);
+ *//*   clear: both;
+ */
+  float: left;
+  clear: left;
+  padding-top: 20px;
+  }
+
+  .contact a {
+    font-size: 30px;
+  }
