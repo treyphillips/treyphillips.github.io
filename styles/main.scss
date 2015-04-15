@@ -55,19 +55,26 @@ body {
 }
 
 .nav-buttons {
+  @include span-columns(3);
+
+  @include media($mobile) {
+    @include span-columns(4);
+ }
+
   font-family: 'Roboto Condensed', sans-serif;
   border: solid white 2px;
   display: inline;
   font-size: 30px;
   color: white;
   display: inline-block;
-  width: 160px;
-  height: 50px;
+/*   width: 160px;
+ */  height: 50px;
   text-align: center;
   padding-top: 10px;
   margin-right: 7px;
   text-shadow: 1px 1px black;
   box-shadow: 1px 1px black;
+
 }
 
 
@@ -90,6 +97,11 @@ body {
     @include span-columns(3);
     @include shift(1);
  }
+}
+
+.bio h1 {
+  margin: 0 auto;
+  width: 500px;
 }
 
 .bio-words {
@@ -147,6 +159,16 @@ body {
   height: 200px;
 }
 
+.chitchat {
+  @include span-columns(3);
+  @include omega(4n);
+
+  background-image: url('../styles/imgs/ChitChat.png');
+  background-size: 100% 100%;
+  width: 300px;
+  height: 200px;
+}
+
 .calc {
   @include span-columns(3);
   @include omega(4n);
@@ -155,138 +177,10 @@ body {
   background-size: 100% 100%;
   width: 300px;
   height: 200px;
-  padding-top: 20px;
+  display: inline-block;
 }
 
-/* .project-display {
-  background-color: #272727;
-  height: 450px;
-  color: #402613;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 35px;
-  @include span-columns(10);
-@include shift(1);
-  height: inherit;
-  padding-bottom: 20px;
-  }
 
-.project-display h1 {
-    @include span-columns(12);
-    @include shift(1);
-    padding-bottom: 20px;
-
-  }
-
-.fescue {
-  @include span-columns(12);
-@include shift(2);  float: left;
-}
-
-.fescue-img {
-  margin: 0 auto;
-  background-image: url("../styles/imgs/Port-fescue.png");
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-
-  @include span-columns(2);
-
-  @include media($mobile) {
-    @include span-columns(4);
- }
-
-  @include media($tablet) {
-    @include span-columns(3);
-}
-}
-
-.fescue-words {
-  @include span-columns(3);
-
-  @include media($mobile) {
-    @include span-columns(4);
-    @include omega(2n);
-
- }
-
-  @include media($tablet) {
-    @include span-columns(3);
-}
-
-  font-size: 25px;
-
-}
-
-.surf {
-  @include span-columns(12);
-@include shift(2);  padding-top: 20px;
-}
-
-.img-div {
-  @include span-columns(4);
-
-}
-
-.surf-img {
-  background-image: url("../styles/imgs/port-surfpaddle.png");
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-  margin: 0 auto;
-  @include span-columns(2);
-
-  @include media($mobile) {
-    @include span-columns(4);
- }
-
-  @include media($tablet) {
-    @include span-columns(3);
-}
-}
-
-.surf-words {
-  @include span-columns(3);
-
-  @include media($mobile) {
-    @include span-columns(4);
-    @include omega(2n);
-
- }
-
-  @include media($tablet) {
-    @include span-columns(3);
-}
-
-  font-size: 25px;
-
-}
-
-.blog-words {
-  font-size: 25px;
-  @include span-columns(3);
-}
-
-.blog-img {
-  background-image: url("../styles/imgs/port-blog.png");
-  background-size: 100% 100%;
-width: 300px;  height: 200px;
-  margin: 0 auto;
-  @include span-columns(2);
-
-  @include media($mobile) {
-    @include span-columns(4);
- }
-
-  @include media($tablet) {
-    @include span-columns(3);
-}
-}
-
-.blog-words {
-  font-size: 25px;
-  @include span-columns(3);
-}
- */
 
 
 
@@ -298,23 +192,24 @@ width: 300px;  height: 200px;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 35px;
+  @include outer-container;
   @include span-columns(10);
-/*   @include shift(1);
- *//*   clear: both;
- */
+
   float: left;
   clear: left;
   padding-top: 20px;
   }
 
-  .contact a {
-  @include span-columns(1);
-  @include shift(1);
+.icon {
+  @include span-columns(2);
+  @include omega(4n);
+}
+
+.contact a {
 
   @include media($mobile) {
     @include span-columns(4);
-    @include shift(2);
- }
+  }
 
- color: #402613;
+  color: #402613;
   }
