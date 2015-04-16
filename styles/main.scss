@@ -17,6 +17,13 @@ body {
   @include outer-container;
   background-color: #fff;
 
+  @include media($mobile) {
+    color: #293f69;
+  }
+
+  @include media($tablet) {
+    color: #293f69;
+  }
 }
 
 
@@ -108,6 +115,8 @@ body {
 
   @include media($mobile) {
     @include span-columns(3);
+    color: #293f69;
+
  }
 }
 
@@ -126,6 +135,8 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
+    color: #293f69;
+
  }
 }
 
@@ -139,6 +150,7 @@ body {
 }
 
 //////////////////////Projects//////////////////////
+
 #project-display {
   @include outer-container;
   @include shift(1);
@@ -247,6 +259,8 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
+    color: #293f69;
+
   }
   }
 
@@ -271,6 +285,7 @@ body {
   @include media($mobile) {
     @include span-columns(3);
     @include shift(1);
+      color: #293f69;
 }
 }
 
@@ -289,7 +304,7 @@ body {
 
   @include media($tablet) {
     @include span-columns(4);
-
+    color: #293f69;
   }
 
 }
@@ -306,6 +321,7 @@ body {
 
   @include media($mobile) {
     width: 100%;
+    color: #293f69;
   }
     }
 
