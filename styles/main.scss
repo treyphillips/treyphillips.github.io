@@ -32,6 +32,12 @@ body {
   @include media($mobile) {
     background-color: #293f69;
     background-image: none;
+    
+  }
+
+  @include media($tablet) {
+    background-color: #293f69;
+    background-image: none;
   }
 }
 
