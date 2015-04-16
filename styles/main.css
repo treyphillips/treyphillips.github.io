@@ -1,5 +1,4 @@
-/* $visual-grid: true;
- */
+/* $visual-grid: true;*/
 html {
   box-sizing: border-box; }
 
@@ -30,6 +29,10 @@ body {
   background-size: cover;
   width: 100%;
   height: 800px; }
+  @media screen and (max-width: 500px) {
+    .header {
+      background-color: #293F69;
+      background-image: none; } }
 
 .header-words {
   padding-top: 70px;
@@ -107,8 +110,7 @@ body {
       float: left;
       display: block;
       margin-right: 6.66667%;
-      width: 73.33333%;
-      margin-left: 26.66667%; }
+      width: 73.33333%; }
       #bio:last-child {
         margin-right: 0; } }
 
@@ -176,6 +178,9 @@ body {
   height: 200px; }
   .fescue:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    .fescue {
+      width: 100%; } }
 
 .surf {
   float: left;
@@ -190,6 +195,9 @@ body {
   height: 200px; }
   .surf:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    .surf {
+      width: 100%; } }
 
 .blog {
   float: left;
@@ -204,6 +212,9 @@ body {
   height: 200px; }
   .blog:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    .blog {
+      width: 100%; } }
 
 .chitchat {
   float: left;
@@ -218,6 +229,9 @@ body {
   height: 200px; }
   .chitchat:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    .chitchat {
+      width: 100%; } }
 
 .calc {
   float: left;
@@ -233,6 +247,10 @@ body {
   display: inline-block; }
   .calc:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 500px) {
+    .calc {
+      width: 100%;
+      margin: 0 auto; } }
 
 .big-div {
   height: 1000px; }
@@ -306,6 +324,9 @@ body {
 #conth1 h1 {
   margin: 0 auto;
   width: 500px; }
+  @media screen and (max-width: 500px) {
+    #conth1 h1 {
+      width: 100%; } }
 
 #wrap {
   float: left;
@@ -335,12 +356,7 @@ body {
   margin: 0 auto; }
   @media screen and (max-width: 500px) {
     #wrap a {
-      float: left;
-      display: block;
-      margin-right: 6.66667%;
-      width: 100%; }
-      #wrap a:last-child {
-        margin-right: 0; } }
+      width: 100%; } }
 
 a .fa {
   margin: auto;

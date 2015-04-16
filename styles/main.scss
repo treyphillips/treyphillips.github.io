@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
-/* $visual-grid: true;
- */@import 'grid-settings';
+/* $visual-grid: true;*/
+@import 'grid-settings';
 @import 'neat/neat';
 $tablet: new-breakpoint(max-width 840px 8);
 $mobile: new-breakpoint(max-width 500px 4);
@@ -30,8 +30,11 @@ body {
   width: 100%;
   height: 800px;
 
-
-}
+  @include media($mobile) {
+    background-color: #293F69;
+    background-image: none;
+  }
+  }
 
 .header-words {
   padding-top: 70px;
@@ -100,7 +103,6 @@ body {
 
   @include media($mobile) {
     @include span-columns(3);
-    @include shift(1);
  }
 }
 
@@ -119,7 +121,6 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
-
  }
 }
 
@@ -142,7 +143,7 @@ body {
 }
 
 .proj {
-padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 
@@ -154,6 +155,10 @@ padding-bottom: 20px;
   background-size: 100% 100%;
   width: 300px;
   height: 200px;
+
+  @include media($mobile) {
+    width: 100%;
+ }
 }
 
 .surf {
@@ -164,6 +169,10 @@ padding-bottom: 20px;
   background-size: 100% 100%;
   width: 300px;
   height: 200px;
+
+  @include media($mobile) {
+    width: 100%;
+ }
 }
 
 .blog {
@@ -174,6 +183,10 @@ padding-bottom: 20px;
   background-size: 100% 100%;
   width: 300px;
   height: 200px;
+
+  @include media($mobile) {
+    width: 100%;
+ }
 }
 
 .chitchat {
@@ -184,6 +197,10 @@ padding-bottom: 20px;
   background-size: 100% 100%;
   width: 300px;
   height: 200px;
+
+  @include media($mobile) {
+    width: 100%;
+ }
 }
 
 .calc {
@@ -195,6 +212,11 @@ padding-bottom: 20px;
   width: 300px;
   height: 200px;
   display: inline-block;
+
+  @include media($mobile) {
+    width: 100%;
+    margin: 0 auto;
+ }
 }
 
 
@@ -251,6 +273,9 @@ padding-bottom: 20px;
   margin: 0 auto;
   width: 500px;
 
+  @include media($mobile) {
+    width: 100%;
+  }
 }
 
 #wrap {
@@ -275,8 +300,7 @@ padding-bottom: 20px;
   margin: 0 auto;
 
   @include media($mobile) {
-    @include span-columns(4);
-
+    width: 100%;
   }
     }
 
