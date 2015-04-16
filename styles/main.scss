@@ -39,7 +39,6 @@ body {
   height: 800px;
 
   @include media($mobile) {
-<<<<<<< HEAD
     background-color: #293f69;
     background-image: none;
 
@@ -47,15 +46,6 @@ body {
 
   @include media($tablet) {
     background-color: #293f69;
-    background-image: none;
-  }
-}
-    background-color: #293F69;
-    background-image: none;
-  }
-
-  @include media($tablet) {
-    background-color: #293F69;
     background-image: none;
   }
   }
