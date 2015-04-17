@@ -1,6 +1,7 @@
 @import 'bourbon/bourbon';
-/* $visual-grid: true;*/
+/*$visual-grid: true; */
 @import 'grid-settings';
+@import "base/base";
 @import 'neat/neat';
 $tablet: new-breakpoint(max-width 840px 8);
 $mobile: new-breakpoint(max-width 500px 4);
@@ -14,9 +15,10 @@ $mobile: new-breakpoint(max-width 500px 4);
 }
 
 body {
-  @include outer-container;
+/*   @include outer-container;*/
   background-color: #fff;
-
+  overflow-x: hidden;
+  overflow-y: auto;
 
   @include media($mobile) {
     color: #293f69;
@@ -27,7 +29,10 @@ body {
   }
 }
 
-
+.outer-container {
+  @include outer-container;
+  height: inherit;
+}
 
 //////////////////////Header//////////////////////
 .header {
@@ -99,16 +104,16 @@ body {
     @include shift(.2);
  }
 
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Lato', sans-serif;
   border: solid white 2px;
   display: inline;
   font-size: 30px;
   color: white;
   display: inline-block;
-/*   width: 160px;
- */  height: 50px;
+/*   width: 160px;*/
+  height: 50px;
   text-align: center;
-  padding-top: 10px;
+/*   padding-top: 10px;*/
   margin-right: 7px;
   text-shadow: 1px 1px black;
   box-shadow: 1px 1px black;
@@ -125,7 +130,7 @@ body {
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 35px;
-  @include span-columns(10);
+  @include span-columns(9);
   display: block;
   padding-bottom: 20px;
   height: inherit;
@@ -152,7 +157,8 @@ body {
   padding-top: 50px;
   padding-bottom: 60px;
   font-size: 25px;
-  @include shift(1);
+  text-align: center;
+  @include shift(1.5);
 
   @include media($mobile) {
     @include span-columns(4);
@@ -168,8 +174,9 @@ body {
 #project-display {
   @include outer-container;
   @include span-columns(9);
-  @include shift(1);
+  @include shift(.6);
 
+  @include omega(5n);
   padding-bottom: 20px;
   padding-left: none;
 
@@ -300,7 +307,7 @@ body {
   text-align: center;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 35px;
+  font-size: 50px;
 
 
   @include media($mobile) {
@@ -314,6 +321,7 @@ body {
   width: 500px;
 
   @include media($mobile) {
+    @include span-columns(4);
 
   }
 }
@@ -331,7 +339,7 @@ body {
   }
 
   @include media($mobile) {
-    @include span-columns(4);
+    @include span-columns(2);
   }
 
 }
@@ -362,6 +370,7 @@ a .fa {
 
   @include media($mobile) {
     font-size: 45px;
+
   }
     }
 
@@ -383,16 +392,21 @@ a .fa {
   text-align: center;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 35px;
+  font-size: 50px;
 
 
   @include media($mobile) {
- /* display: flex;*/
-    color: #293f69;
+/*     display: flex;
+ */    color: #293f69;
 }
 }
 
 .h1h1 h1 {
   margin: 0 auto;
   width: 500px;
+
+  @include media($mobile) {
+    @include span-columns(4);
+
+  }
 }
