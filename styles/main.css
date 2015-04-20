@@ -488,6 +488,31 @@ body {
       width: 100%;
       margin: 0 auto; } }
 
+.btn-lg {
+  color: #fff;
+  background-color: #402613;
+  border-color: #130269;
+  margin-right: 5px;
+  height: 20px; }
+
+.btn-lg:hover,
+.btn-lg:focus,
+.btn-lg:active,
+.btn-lg.active,
+.open .dropdown-toggle.btn-lg {
+  color: #fff;
+  background-color: #26749E;
+  border-color: #130269; }
+
+.btn-lg:active,
+.btn-lg.active,
+.open .dropdown-toggle.btn-lg {
+  background-image: none; }
+
+.btn-lg .badge {
+  color: #402613;
+  background-color: #fff; }
+
 .big-div {
   height: 500px;
   text-align: center; }
