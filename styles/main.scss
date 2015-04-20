@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
-/* $visual-grid: true;
- */@import 'grid-settings';
+/* $visual-grid: true; */
+@import 'grid-settings';
 @import "base/base";
 @import 'neat/neat';
 $tablet: new-breakpoint(max-width 840px 8);
@@ -47,7 +47,7 @@ body {
   @include media($mobile) {
     background-color: #293f69;
     background-image: none;
-
+    height: 700px;
   }
 
 /*   @include media($tablet) {
@@ -66,7 +66,7 @@ body {
   @include shift(.1);
 
   @include media($mobile) {
-    @include shift(2);
+    @include shift(1.5);
     font-size: 70px;
 
  }
@@ -81,9 +81,10 @@ body {
   @include shift(.1);
 
   @include media($mobile) {
-    font-size: 45px;
-    @include shift(2);
-
+    font-size: 40px;
+    @include span-columns(4);
+/*     @include shift(2);
+ */
  }
 }
 
@@ -96,17 +97,17 @@ body {
   padding-top: 94px;
   width: 500px;
   margin: 0 auto;
-  @include span-columns(8);
-  @include shift(.1)
+  @include span-columns(9);
+  @include shift(.25)
 }
 
 .nav-buttons {
   @include span-columns(3);
 
   @include media($mobile) {
-    @include span-columns(4);
-    @include shift(.2);
- }
+    @include span-columns(2);
+    @include shift(1);
+}
 
   font-family: 'Lato', sans-serif;
   border: solid white 2px;
@@ -114,27 +115,33 @@ body {
   font-size: 30px;
   color: white;
   display: inline-block;
-/*   width: 160px;*/
   height: 50px;
   text-align: center;
-/*   padding-top: 10px;*/
   margin-right: 7px;
   text-shadow: 1px 1px black;
   box-shadow: 1px 1px black;
-
-
 }
 
+.nav-buttons:hover {
+  color: #402613;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: #402613;
+  text-shadow: none;
+}
+
+.lil-buttons {
+  margin: 0 auto;
+  padding-right: 20px;
+}
 
 //////////////////////Bio//////////////////////
 
 #bio {
+  @include span-columns(9);
   width: 100%;
-/*   height: 450px;*/
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 35px;
-  @include span-columns(9);
   display: block;
   padding-bottom: 20px;
   height: inherit;
@@ -167,7 +174,7 @@ body {
   @include media($mobile) {
     @include span-columns(4);
     color: #293f69;
-
+    font-size: 23px;
  }
 }
 
@@ -269,12 +276,24 @@ body {
 
 //////////////////////Project buttons//////////////////////
 .btn-lg {
-  color: #fff;
-  background-color: #402613;
-  border-color: #130269;
   margin-right: 5px;
   height: 20px;
+  position: relative;
+  bottom: -165px;
+  right: -70px;
+  padding: 10px;
 
+  border-radius: 5px;
+  font-size: 21px;
+  font-weight: lighter;
+  width: 50%;
+  margin: 0 auto;
+  text-shadow: none;
+  border: solid 1px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
 }
 
 .btn-lg:hover,
@@ -283,7 +302,7 @@ body {
 .btn-lg.active,
 .open .dropdown-toggle.btn-lg {
   color: #fff;
-  background-color: #26749E;
+  background-color: #402613;
   border-color: #130269;
 }
 
@@ -296,6 +315,59 @@ body {
 .btn-lg .badge {
   color: #402613;
   background-color: #fff;
+}
+
+
+
+//////////////////////Skills//////////////////////
+
+.skill-div {
+  height: 200px;
+  text-align: center;
+}
+
+#skills {
+  display: block;
+  padding: 100px 0 20px;
+  width: 100%;
+  height: inherit;
+  text-align: center;
+  color: #402613;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 50px;
+
+
+  @include media($mobile) {
+    color: #293f69;
+}
+
+}
+
+#skills h1 {
+  margin: 0 auto;
+  width: 500px;
+
+  @include media($mobile) {
+    @include span-columns(4);
+
+  }
+}
+
+.skill-div{
+  @include span-columns(6);
+  padding-top: 50px;
+  padding-bottom: 60px;
+  font-size: 25px;
+  text-align: center;
+  @include shift(1.5);
+
+  @include media($mobile) {
+    @include span-columns(2);
+    @include shift(1);
+    color: #293f69;
+    font-size: 22px;
+
+ }
 }
 
 
