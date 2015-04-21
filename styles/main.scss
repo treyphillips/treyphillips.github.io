@@ -3,6 +3,8 @@
 @import 'grid-settings';
 @import 'base/base';
 @import 'neat/neat';
+
+$large: new-breakpoint(max-width 1080px 9);
 $tablet: new-breakpoint(max-width 840px 8);
 $mobile: new-breakpoint(max-width 500px 4);
 
@@ -15,7 +17,7 @@ $mobile: new-breakpoint(max-width 500px 4);
 }
 
 body {
-/*   @include outer-container;*/
+  @include outer-container;
   background-color: #fff;
   overflow-x: hidden;
   overflow-y: auto;
@@ -35,6 +37,7 @@ body {
 }
 
 //////////////////////Header//////////////////////
+
 .header {
   clear: both;
   box-shadow: 2px 2px black;
@@ -44,32 +47,28 @@ body {
   height: 800px;
 
 
+
   @include media($mobile) {
     background-color: #293f69;
     background-image: none;
     width: 100%;
     height: 700px;
   }
-
-/*   @include media($tablet) {
-  background-color: #293f69;
-  background-image: none;
-} */
   }
 
 .header-words {
+  @include shift(.1);
   padding-top: 70px;
   padding-left: 5px;
   color: white;
   font-family: 'Lato', sans-serif;
   font-size: 100px;
   text-shadow: 1px 1px black;
-  @include shift(.1);
 
   @include media($mobile) {
-    @include shift(1.1);
-    font-size: 70px;
+    @include shift(1);
     text-align: left;
+    font-size: 70px;
  }
 
 }
@@ -104,24 +103,27 @@ body {
 }
 
 .nav-buttons {
-  @include span-columns(3);
+  @include span-columns(2);
+  @include shift(.25);
 
   @include media($mobile) {
-    @include span-columns(2);
-    @include shift(1);
+    @include span-columns(2.5);
+    @include shift(.5);
 }
 
+
+
+  background-color: rgba(255, 255, 255, .8);
   font-family: 'Lato', sans-serif;
-  border: solid white 2px;
-/*   display: inline;
+/*   border: solid white 2px;
  */  font-size: 30px;
-  color: white;
+  color: #402613;
   display: inline-block;
   height: 50px;
   text-align: center;
   margin-right: 7px;
-  text-shadow: 1px 1px black;
-  box-shadow: 1px 1px black;
+/*   text-shadow: 1px 1px black;
+ */  box-shadow: 1px 1px black;
 }
 
 .nav-buttons:hover {
@@ -186,17 +188,19 @@ body {
 
 #project-display {
   @include outer-container;
-  @include span-columns(9);
-  @include shift(.6);
+  @include span-columns(7);
+  @include shift(1.5);
 
   @include omega(5n);
   padding-bottom: 20px;
   padding-left: none;
 
   @include media($mobile) {
-    @include shift(0);
+    @include shift(1);
   }
 }
+
+
 
 .proj {
   padding: 100px 0 20px;
@@ -324,6 +328,7 @@ body {
 //////////////////////Skills//////////////////////
 
 .skill-div {
+  margin-top: 50px;
   height: 310px;
   text-align: center;
 }
