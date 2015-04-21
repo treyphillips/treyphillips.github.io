@@ -1,6 +1,6 @@
 @import 'bourbon/bourbon';
-$visual-grid: true;
-@import 'grid-settings';
+/* $visual-grid: true;
+ */@import 'grid-settings';
 @import 'base/base';
 @import 'neat/neat';
 
@@ -186,7 +186,7 @@ body {
   @include outer-container;
   @include span-columns(7);
   @include shift(1.5);
- 
+
   @include omega(5n);
   padding-bottom: 20px;
   padding-left: none;
