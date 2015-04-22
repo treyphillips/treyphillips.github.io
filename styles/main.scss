@@ -4,8 +4,8 @@
 @import 'base/base';
 @import 'neat/neat';
 
-$large: new-breakpoint(max-width 1080px 9);
-$tablet: new-breakpoint(max-width 840px 8);
+$large: new-breakpoint(min-width 841px);
+$tablet: new-breakpoint(min-width 501px max-width 840px 8);
 $mobile: new-breakpoint(max-width 500px 4);
 
 *,
@@ -17,44 +17,38 @@ $mobile: new-breakpoint(max-width 500px 4);
 }
 
 body {
-  @include outer-container;
   background-color: #fff;
-  overflow-x: hidden;
-  overflow-y: auto;
+  // overflow-x: hidden;
+  // overflow-y: auto;
 
   @include media($mobile) {
-    color: #293f69;
+    /* color: #293f69; */
   }
 
   @include media($tablet) {
-    color: #293f69;
+    /* color: #293f69; */
   }
-}
-
-.outer-container {
-  @include outer-container;
-  height: inherit;
 }
 
 //////////////////////Header//////////////////////
 
 .header {
-  clear: both;
+  // clear: both;
   box-shadow: 2px 2px black;
   background-image: url('../styles/imgs/sapien.jpg');
   background-size: cover;
-  width: 100%;
+  // width: 100%;
   height: 800px;
 
+  @include outer-container(100%);
 
 
   @include media($mobile) {
-    background-color: #293f69;
-    background-image: none;
-    width: 100%;
-    height: 700px;
-    }
+    /*background-color: #293f69; */
+   /*  background-image: none; */
+     height: 700px;
   }
+}
 
 .header-words {
   @include shift(.1);
@@ -90,25 +84,26 @@ body {
 
 .header a {
   text-decoration: none;
-  color: white;
+  // color: white;
 }
 
 .button-div {
   padding-top: 94px;
-  width: 500px;
-  margin: 0 auto;
+  // width: 500px;
+  // margin: 0 auto;
   text-align: center;
-  @include span-columns(9);
-  @include shift(.25)
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($mobile) {
+    @include span-columns(4);
+    @include shift(0);
+  }
 }
 
-.nav-buttons {
-  @include span-columns(2);
-  @include shift(.25);
-
-  display: inline-block;
-  margin-right: 7px;
-  border-radius: 8px;
+.nav-button {
+  @include span-columns(2.5 of 10);
+  border-radius: 5px;
   box-shadow: 1px 1px black;
   background-color: rgba(255, 255, 255, .8);
   height: 50px;
@@ -116,40 +111,36 @@ body {
   color: #402613;
   font-family: 'Lato', sans-serif;
   font-size: 30px;
+  margin-bottom: 1px;
+
 
   @include media($mobile) {
-    @include span-columns(4);
-    float: left;
-}
+    @include span-columns(4 of 4);
+  }
 }
 
-.nav-buttons:hover {
+.nav-button:hover {
   border-color: #402613;
   background-color: rgba(255, 255, 255, .5);
   text-shadow: none;
   color: #402613;
 }
 
-.lil-buttons {
-  margin: 0 auto;
-  padding-right: 20px;
-}
-
 //////////////////////Bio//////////////////////
 
 #bio {
-  @include span-columns(9);
+  @include outer-container;
   display: block;
   padding-bottom: 20px;
   width: 100%;
-  height: inherit;
+  height: 200px;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 25px;
 
   @include media($mobile) {
-    @include span-columns(3);
-    color: #293f69;
+    @include outer-container;
+    /* color: #293f69; */
  }
 }
 
@@ -164,15 +155,17 @@ body {
 
 .bio-words {
   @include span-columns(6);
-  @include shift(1.5);
+  @include shift(3);
 
   @include media($mobile) {
-    @include span-columns(4);
-    color: #293f69;
+    @include span-columns(3 of 4);
+    @include shift(.5);
+
+    /* color: #293f69; */
     font-size: 23px;
  }
 
-  padding-top: 50px;
+  padding-top: 20px;
   padding-bottom: 60px;
   text-align: center;
   font-size: 25px;
@@ -184,106 +177,69 @@ body {
 
 #project-display {
   @include outer-container;
-  @include span-columns(7);
-  @include shift(1);
 
-/*   @include omega(5n);
- */  padding-bottom: 20px;
-  padding-left: none;
+}
+
+.project {
+  position: relative;
+  background-size: 100% 100%;
+  height: 200px;
+  margin-bottom: 10px;
+
+  @include span-columns(3);
+  @include omega(4n);
 
   @include media($tablet) {
-    @include span-columns(6.5);
-    @include shift(1);
- }
+    @include span-columns(3 of 7);
+    @include shift(.25);
+  }
 
   @include media($mobile) {
-    @include shift(1);
+    @include span-columns(3.5);
+    @include shift(.25);
+
   }
 }
 
-
-
-.proj {
-  padding: 100px 0 20px;
-  text-align: center;
-}
-
-
 .fescue {
-  @include span-columns(3);
   background-image: url('../styles/imgs/Port-fescue.png');
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-
-  @include media($mobile) {
-    width: 100%;
- }
 }
 
 .surf {
-  @include span-columns(3);
   background-image: url('../styles/imgs/port-surfpaddle.png');
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-
-  @include media($mobile) {
-    width: 100%;
- }
 }
 
 .blog {
-  @include span-columns(3);
   background-image: url('../styles/imgs/port-blog.png');
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-
-  @include media($mobile) {
-    width: 100%;
- }
 }
 
 .chitchat {
-  @include span-columns(3);
   background-image: url('../styles/imgs/ChitChat.png');
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-
-  @include media($mobile) {
-    width: 100%;
- }
 }
 
 .calc {
-  @include span-columns(3);
-  display: inline-block;
   background-image: url('../styles/imgs/port-calc.png');
-  background-size: 100% 100%;
-  width: 300px;
-  height: 200px;
-
-  @include media($mobile) {
-    margin: 0 auto;
-    width: 100%;
- }
 }
 
 
 //////////////////////Project buttons//////////////////////
+
+.buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
 .btn-lg {
-  position: relative;
-  right: -70px;
-  bottom: -165px;
-  margin: 2px 0 10px;
+  display: inline-block;
+  width: 50%;
   border: solid 1px;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.9);
   padding: 10px;
-  width: 50%;
-  height: 20px;
+  text-align: center;
   text-shadow: none;
   color: #000;
   font-size: 21px;
@@ -312,40 +268,33 @@ body {
   background-color: #fff;
 }
 
-.button {
-  margin: 0 auto;
-}
-
 //////////////////////Skills//////////////////////
 
-.skill-div {
-  @include span-columns(6);
-  margin-top: 50px;
-  padding-top: 50px;
-  padding-bottom: 40px;
-  height: 210px;
-  text-align: center;
-  font-size: 25px;
-  @include shift(1.5);
-
-  @include media($mobile) {
-    @include span-columns(2);
-    @include shift(1);
-    font-size: 22px;
-
- }
-}
-
 #skills {
-  display: block;
+  @include outer-container;
   padding: 100px 0 20px;
-  width: 100%;
-  height: inherit;
+  height: 200px;
   text-align: center;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 50px;
 
+  p {
+    @include span-columns(8);
+    @include shift(2);
+    padding-top: 20px;
+    padding-bottom: 40px;
+    height: 210px;
+    text-align: center;
+    font-size: 25px;
+
+    @include media($mobile) {
+      @include span-columns(2);
+      @include shift(1);
+      /* color: #293f69; */
+      font-size: 22px;
+    }
+  }
 }
 
 #skills h1 {
@@ -354,21 +303,21 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
-    color: #293f69;
+    /* color: #293f69; */
 }
 }
 
 
 .skill-div {
-
   @include media($tablet) {
     color: #402613;
 }
 
   @include media($mobile) {
-    color: #293F69;
+    /* color: #293f69; */
 }
 }
+
 //////////////////////Contact//////////////////////
 
 .big-div {
@@ -391,7 +340,7 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
-    color: #293f69;
+    /* color: #293f69; */
   }
   }
 
@@ -413,12 +362,13 @@ body {
 
 
   @include media($mobile) {
-    color: #293f69;
+    /* color: #293f69; */
 }
 }
 
 #conth1 h1 {
   margin: 0 auto;
+  margin-top: 30px;
   width: 500px;
 
   @include media($mobile) {
@@ -436,11 +386,12 @@ body {
   @include media($tablet) {
     @include span-columns(4);
     @include shift(2);
-    color: #293f69;
+    /* color: #293f69; */
   }
 
   @include media($mobile) {
     @include span-columns(2);
+    @include shift(1);
 }
 
 }
@@ -460,7 +411,7 @@ body {
   @include media($mobile) {
     margin: 0 auto;
     width: 90px;
-    color: #293f69;
+    /* color: #293f69; */
   }
     }
 
@@ -482,7 +433,7 @@ a .fa {
     color: white;
 
     @include media($mobile) {
-      background-color: #293f69;
+      /*  background-color: #293f69; */
       color: white;
     }
     }
@@ -498,7 +449,7 @@ a .fa {
   font-size: 50px;
 
   @include media($mobile) {
-    color: #293f69;
+    /* color: #293f69; */
 }
 }
 
