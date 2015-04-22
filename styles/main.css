@@ -400,7 +400,9 @@ body {
   display: block;
   margin-right: 2.85714%;
   width: 77.14286%;
-  margin-left: 17.14286%;
+  margin-left: 11.42857%;
+  /*   @include omega(5n);
+   */
   padding-bottom: 20px;
   padding-left: none; }
   #project-display::after {
@@ -409,10 +411,6 @@ body {
     display: table; }
   #project-display:last-child {
     margin-right: 0; }
-  #project-display:nth-child(5n) {
-    margin-right: 0; }
-  #project-display:nth-child(5n+1) {
-    clear: left; }
   @media screen and (max-width: 840px) {
     #project-display {
       float: left;
@@ -552,7 +550,7 @@ body {
   margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 40px;
-  height: 310px;
+  height: 210px;
   text-align: center;
   font-size: 25px;
   margin-left: 17.14286%; }

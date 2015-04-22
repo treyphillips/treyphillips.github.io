@@ -185,10 +185,10 @@ body {
 #project-display {
   @include outer-container;
   @include span-columns(7);
-  @include shift(1.5);
+  @include shift(1);
 
-  @include omega(5n);
-  padding-bottom: 20px;
+/*   @include omega(5n);
+ */  padding-bottom: 20px;
   padding-left: none;
 
   @include media($tablet) {
@@ -323,7 +323,7 @@ body {
   margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 40px;
-  height: 310px;
+  height: 210px;
   text-align: center;
   font-size: 25px;
   @include shift(1.5);
