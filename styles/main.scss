@@ -314,7 +314,7 @@ body {
 
 //////////////////////Skills//////////////////////
 
-.skill-div{
+.skill-div {
   @include span-columns(6);
   margin-top: 50px;
   padding-top: 50px;
@@ -500,6 +500,6 @@ a .fa {
 
   @include media($mobile) {
     @include span-columns(4);
-
+    padding: 20px;
   }
 }

@@ -734,7 +734,8 @@ a .fa {
       float: left;
       display: block;
       margin-right: 6.66667%;
-      width: 100%; }
+      width: 100%;
+      padding: 20px; }
       .h1h1 h1:last-child {
         margin-right: 0; } }
 
