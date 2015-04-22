@@ -323,8 +323,8 @@ body {
       float: left;
       display: block;
       margin-right: 6.66667%;
-      width: 60%;
-      margin-left: 13.33333%; }
+      width: 100%;
+      float: left; }
       .nav-buttons:last-child {
         margin-right: 0; } }
 
@@ -413,9 +413,18 @@ body {
     margin-right: 0; }
   #project-display:nth-child(5n+1) {
     clear: left; }
+  @media screen and (max-width: 840px) {
+    #project-display {
+      float: left;
+      display: block;
+      margin-right: 3.22581%;
+      width: 80.64516%;
+      margin-left: 12.90323%; }
+      #project-display:last-child {
+        margin-right: 0; } }
   @media screen and (max-width: 500px) {
     #project-display {
-      margin-left: 11.42857%; } }
+      margin-left: 12.90323%; } }
 
 .proj {
   padding: 100px 0 20px;
@@ -568,10 +577,7 @@ body {
   text-align: center;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 50px;
-  /*   @include media($mobile) {
-    color: #293f69;
-  } */ }
+  font-size: 50px; }
 
 #skills h1 {
   margin: 0 auto;
@@ -585,6 +591,13 @@ body {
       color: #293f69; }
       #skills h1:last-child {
         margin-right: 0; } }
+
+@media screen and (max-width: 840px) {
+  .skill-div {
+    color: #402613; } }
+@media screen and (max-width: 500px) {
+  .skill-div {
+    color: #293F69; } }
 
 .big-div {
   height: 500px;

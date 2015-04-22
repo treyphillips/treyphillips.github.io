@@ -118,8 +118,8 @@ body {
   font-size: 30px;
 
   @include media($mobile) {
-    @include span-columns(2.5);
-    @include shift(.5);
+    @include span-columns(4);
+    float: left;
 }
 }
 
@@ -192,6 +192,8 @@ body {
   padding-left: none;
 
   @include media($tablet) {
+    @include span-columns(6.5);
+    @include shift(1);
  }
 
   @include media($mobile) {
@@ -344,9 +346,6 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 50px;
 
-/*   @include media($mobile) {
-  color: #293f69;
-} */
 }
 
 #skills h1 {
@@ -360,9 +359,16 @@ body {
 }
 
 
+.skill-div {
 
+  @include media($tablet) {
+    color: #402613;
+}
 
-
+  @include media($mobile) {
+    color: #293F69;
+}
+}
 //////////////////////Contact//////////////////////
 
 .big-div {
