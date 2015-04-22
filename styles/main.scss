@@ -181,13 +181,12 @@ body {
 }
 
 .project {
-  position: relative;
-  background-size: 100% 100%;
-  height: 200px;
-  margin-bottom: 10px;
-
   @include span-columns(3);
   @include omega(4n);
+  position: relative;
+  margin-bottom: 10px;
+  background-size: 100% 100%;
+  height: 200px;
 
   @include media($tablet) {
     @include span-columns(3 of 7);
@@ -195,9 +194,9 @@ body {
   }
 
   @include media($mobile) {
-    @include span-columns(3.5);
-    @include shift(.25);
-
+    @include span-columns(4);
+/*     @include shift(.25); */
+    height: 220px;
   }
 }
 
@@ -245,6 +244,11 @@ body {
   font-size: 21px;
   font-weight: lighter;
 
+/*   @include media($mobile) {
+  @include span-columns(1);
+  @include shift(.25);
+
+} */
 }
 
 .btn-lg:hover,
