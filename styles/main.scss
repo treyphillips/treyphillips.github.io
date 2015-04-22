@@ -97,6 +97,7 @@ body {
   padding-top: 94px;
   width: 500px;
   margin: 0 auto;
+  text-align: center;
   @include span-columns(9);
   @include shift(.25)
 }
