@@ -82,10 +82,9 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
-
-    text-align: center;
-    font-size: 35px;
-
+    text-align: left;
+    font-size: 30px;
+    padding-left: 45px;
  }
 }
 
@@ -310,7 +309,9 @@ body {
   background-color: #fff;
 }
 
-
+.button {
+  margin: 0 auto;
+}
 
 //////////////////////Skills//////////////////////
 

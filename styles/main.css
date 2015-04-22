@@ -277,8 +277,9 @@ body {
       display: block;
       margin-right: 6.66667%;
       width: 100%;
-      text-align: center;
-      font-size: 35px; }
+      text-align: left;
+      font-size: 30px;
+      padding-left: 45px; }
       .headh2:last-child {
         margin-right: 0; } }
 
@@ -529,6 +530,9 @@ body {
 .btn-lg .badge {
   color: #402613;
   background-color: #fff; }
+
+.button {
+  margin: 0 auto; }
 
 .skill-div {
   float: left;
