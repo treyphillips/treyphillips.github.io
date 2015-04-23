@@ -230,12 +230,6 @@ body {
   transform: translateX(-50%);
   white-space: nowrap;
 
-  @include media($mobile) {
-    left: 10%;
-    transform: translateX(-10%);
-
-
-  }
 }
 
 .btn-lg {
@@ -351,7 +345,7 @@ body {
 
   @include media($mobile) {
     @include span-columns(4);
-    /* color: #293f69; */
+    margin-top: 20px;
   }
   }
 

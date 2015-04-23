@@ -444,10 +444,6 @@ body {
   left: 50%;
   transform: translateX(-50%);
   white-space: nowrap; }
-  @media screen and (max-width: 500px) {
-    .buttons {
-      left: 10%;
-      transform: translateX(-10%); } }
 
 .btn-lg {
   display: inline-block;
@@ -576,7 +572,7 @@ body {
       display: block;
       margin-right: 7.42297%;
       width: 100%;
-      /* color: #293f69; */ }
+      margin-top: 20px; }
       .contact:last-child {
         margin-right: 0; } }
 
