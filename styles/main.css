@@ -446,8 +446,8 @@ body {
   white-space: nowrap; }
   @media screen and (max-width: 500px) {
     .buttons {
-      left: 25%;
-      transform: translateX(-25%); } }
+      left: 10%;
+      transform: translateX(-10%); } }
 
 .btn-lg {
   display: inline-block;

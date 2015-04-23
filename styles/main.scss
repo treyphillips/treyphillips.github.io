@@ -231,8 +231,8 @@ body {
   white-space: nowrap;
 
   @include media($mobile) {
-    left: 25%;
-    transform: translateX(-25%);
+    left: 10%;
+    transform: translateX(-10%);
 
 
   }
