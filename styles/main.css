@@ -538,7 +538,8 @@ body {
     color: #402613; } }
 @media screen and (max-width: 500px) {
   .skill-div {
-    /* color: #293f69; */ } }
+    /* color: #293f69; */
+    margin-bottom: 15px; } }
 
 .big-div {
   height: 500px;
