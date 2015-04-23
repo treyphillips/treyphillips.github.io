@@ -227,7 +227,8 @@ body {
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translateX(-50%);
+/*   transform: translateX(-50%); */
+  @include transform(translatex(-50%));
   white-space: nowrap;
 
 }
@@ -283,6 +284,10 @@ body {
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 50px;
+
+  @include media($mobile) {
+    height: 300px;
+  }
 
   p {
     @include span-columns(8);
