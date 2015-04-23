@@ -286,7 +286,7 @@ body {
   font-size: 50px;
 
   @include media($mobile) {
-    height: 300px;
+    height: 350px;
   }
 
   p {
@@ -324,7 +324,6 @@ body {
 }
 
   @include media($mobile) {
-    /* color: #293f69; */
     margin-bottom: 15px;
 }
 }

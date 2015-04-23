@@ -502,7 +502,7 @@ body {
     display: table; }
   @media screen and (max-width: 500px) {
     #skills {
-      height: 300px; } }
+      height: 350px; } }
   #skills p {
     float: left;
     display: block;
@@ -546,7 +546,6 @@ body {
     color: #402613; } }
 @media screen and (max-width: 500px) {
   .skill-div {
-    /* color: #293f69; */
     margin-bottom: 15px; } }
 
 .big-div {
