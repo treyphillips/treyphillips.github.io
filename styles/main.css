@@ -535,10 +535,10 @@ body {
   background-image: url("../styles/imgs/git-logo.jpg"); }
 
 .javascript {
-  background-image: url("../styles/imgs/javaScript.svg"); }
+  background-image: url("../styles/imgs/js1_0.png"); }
 
 .jquery {
-  background-image: url("../styles/imgs/jquery.gif"); }
+  background-image: url("../styles/imgs/jquery-logo.jpg"); }
 
 .sass {
   background-image: url("../styles/imgs/sass-logo.png"); }
@@ -550,7 +550,7 @@ body {
   background-image: url("../styles/imgs/backbone.png"); }
 
 .ember {
-  background-image: url("../styles/imgs/ember.png"); }
+  background-image: url("../styles/imgs/Ember.png"); }
 
 .github {
   background-image: url("../styles/imgs/octocat.jpg"); }
