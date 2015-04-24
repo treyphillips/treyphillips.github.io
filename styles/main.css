@@ -1,4 +1,5 @@
-/* $visual-grid: true; */
+/* $visual-grid: true;
+ */
 /* @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min--moz-device-pixel-ratio: 2),
@@ -352,9 +353,6 @@ body {
   margin: 0 auto;
   width: 500px; }
 
-.who {
-  text-align: center; }
-
 .bio-words {
   float: left;
   display: block;
@@ -489,65 +487,125 @@ body {
 #skills {
   max-width: 80em;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; }
+  #skills::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.skill {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 10.43705%;
+  margin-left: 16.20663%;
+  position: relative;
+  margin-bottom: 10px;
+  background-size: 100% 100%;
+  height: 90px; }
+  .skill:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 501px) and (max-width: 840px) {
+    .skill {
+      float: left;
+      display: block;
+      margin-right: 4.11092%;
+      width: 10.76207%;
+      margin-left: 14.87299%; }
+      .skill:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 500px) {
+    .skill {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 12.71884%;
+      margin-left: 22.82738%;
+      height: 45px; }
+      .skill:last-child {
+        margin-right: 0; } }
+
+.html {
+  background-image: url("../styles/imgs/HTML5.png"); }
+
+.css {
+  background-image: url("../styles/imgs/CSS3_Logo.png"); }
+
+.git {
+  background-image: url("../styles/imgs/git-logo.jpg"); }
+
+.javascript {
+  background-image: url("../styles/imgs/javaScript.svg"); }
+
+.jquery {
+  background-image: url("../styles/imgs/jquery.gif"); }
+
+.sass {
+  background-image: url("../styles/imgs/sass-logo.png"); }
+
+.bourbon {
+  background-image: url("../styles/imgs/bourbon-neat2.svg"); }
+
+.underscore {
+  background-image: url("../styles/imgs/backbone.png"); }
+
+.ember {
+  background-image: url("../styles/imgs/ember.png"); }
+
+.github {
+  background-image: url("../styles/imgs/octocat.jpg"); }
+
+/* #skills {
+  @include outer-container;
   padding: 100px 0 20px;
   height: 200px;
   text-align: center;
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 50px; }
-  #skills::after {
-    clear: both;
-    content: "";
-    display: table; }
-  @media screen and (max-width: 500px) {
-    #skills {
-      height: 350px; } }
-  #skills p {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 65.88078%;
-    margin-left: 17.05961%;
+  font-size: 50px;
+
+  @include media($mobile) {
+    height: 350px;
+  }
+
+  p {
+    @include span-columns(8);
+    @include shift(2);
     padding-top: 20px;
     padding-bottom: 40px;
     height: 210px;
     text-align: center;
-    font-size: 25px; }
-    #skills p:last-child {
-      margin-right: 0; }
-    @media screen and (max-width: 500px) {
-      #skills p {
-        float: left;
-        display: block;
-        margin-right: 7.42297%;
-        width: 46.28851%;
-        margin-left: 26.85574%;
-        /* color: #293f69; */
-        font-size: 22px; }
-        #skills p:last-child {
-          margin-right: 0; } }
+    font-size: 25px;
+
+    @include media($mobile) {
+      @include span-columns(2);
+      @include shift(1);
+      color: #293f69;
+      font-size: 22px;
+    }
+  }
+}
 
 #skills h1 {
   margin: 0 auto;
-  width: 500px; }
-  @media screen and (max-width: 500px) {
-    #skills h1 {
-      float: left;
-      display: block;
-      margin-right: 7.42297%;
-      width: 100%;
-      /* color: #293f69; */ }
-      #skills h1:last-child {
-        margin-right: 0; } }
+  width: 500px;
 
-@media screen and (min-width: 501px) and (max-width: 840px) {
-  .skill-div {
-    color: #402613; } }
-@media screen and (max-width: 500px) {
-  .skill-div {
-    margin-bottom: 15px; } }
+  @include media($mobile) {
+    @include span-columns(4);
+    color: #293f69;
+}
+}
 
+
+.skill-div {
+  @include media($tablet) {
+    color: #402613;
+}
+
+  @include media($mobile) {
+    margin-bottom: 15px;
+}
+} */
 .big-div {
   height: 500px;
   text-align: center; }
