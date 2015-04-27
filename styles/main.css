@@ -555,8 +555,11 @@ body {
 .github {
   background-image: url("../styles/imgs/octocat.jpg"); }
 
-.github {
+.mandrill {
   background-image: url("../styles/imgs/mandrill-logo2.png"); }
+
+.parse {
+  background-image: url("../styles/imgs/parse.jpg"); }
 
 /* #skills {
   @include outer-container;
