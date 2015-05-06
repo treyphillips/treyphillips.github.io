@@ -241,7 +241,7 @@ body {
   padding-top: 70px;
   padding-left: 5px;
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 100px;
   text-shadow: 1px 1px black; }
   @media screen and (max-width: 500px) {
@@ -252,7 +252,7 @@ body {
 
 .headh2 {
   color: white;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   text-shadow: 1px 1px black;
   margin-left: 2.68557%; }
@@ -302,7 +302,7 @@ body {
   height: 50px;
   text-align: center;
   color: #402613;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   margin-bottom: 1px; }
   .nav-button:last-child {
