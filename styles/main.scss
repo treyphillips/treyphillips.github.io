@@ -33,7 +33,7 @@ body {
 //////////////////////Header//////////////////////
 
 .header {
-  // clear: both;
+   // clear: both;
   box-shadow: 2px 2px black;
   background-image: url('../styles/imgs/sapien.jpg');
   background-size: cover;
@@ -46,7 +46,7 @@ body {
   @include media($mobile) {
     /*background-color: #293f69; */
    /*  background-image: none; */
-   height: 700px;
+    height: 700px;
   }
 }
 
@@ -78,7 +78,7 @@ body {
     @include span-columns(4);
     text-align: left;
     font-size: 30px;
-    padding-left: 45px;
+    padding-left: 30px;
  }
 }
 
