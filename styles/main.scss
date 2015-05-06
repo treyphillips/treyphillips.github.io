@@ -1,5 +1,5 @@
 @import 'bourbon/bourbon';
-$visual-grid: true;  
+/* $visual-grid: true;   */
 @import 'grid-settings';
 @import 'base/base';
 @import 'neat/neat';
@@ -46,7 +46,7 @@ body {
   @include media($mobile) {
     /*background-color: #293f69; */
    /*  background-image: none; */
-     height: 700px;
+   height: 700px;
   }
 }
 
