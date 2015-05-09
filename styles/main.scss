@@ -72,7 +72,8 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
   text-shadow: 1px 1px black;
-  @include shift(.1);
+/*   @include shift(.1);*/
+  padding-left: 23px;
 
   @include media($mobile) {
     @include span-columns(4);

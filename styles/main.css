@@ -255,7 +255,8 @@ body {
   font-family: 'Oswald', sans-serif;
   font-size: 75px;
   text-shadow: 1px 1px black;
-  margin-left: 2.68557%; }
+  /*   @include shift(.1);*/
+  padding-left: 23px; }
   @media screen and (max-width: 500px) {
     .headh2 {
       float: left;
