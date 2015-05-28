@@ -234,6 +234,7 @@ body {
     .header {
       /*background-color: #293f69; */
       /*  background-image: none; */
+      background-image: url("../styles/imgs/Smallerportpics/sapien.jpg");
       height: 700px; } }
 
 .header-words {
@@ -422,19 +423,19 @@ body {
         margin-right: 0; } }
 
 .fescue {
-  background-image: url("../styles/imgs/Port-fescue.png"); }
+  background-image: url("../styles/imgs/Smallerportpics/Port-fescue.png"); }
 
 .surf {
-  background-image: url("../styles/imgs/port-surfpaddle.png"); }
+  background-image: url("../styles/imgs/Smallerportpics/port-surfpaddle.png"); }
 
 .blog {
-  background-image: url("../styles/imgs/port-blog.png"); }
+  background-image: url("../styles/imgs/Smallerportpics/blog.png"); }
 
 .chitchat {
-  background-image: url("../styles/imgs/ChitChat.png"); }
+  background-image: url("../styles/imgs/Smallerportpics/chitchat.png"); }
 
 .calc {
-  background-image: url("../styles/imgs/port-calc.png"); }
+  background-image: url("../styles/imgs/Smallerportpics/port-calc.png"); }
 
 .buttons {
   position: absolute;
