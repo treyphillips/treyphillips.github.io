@@ -562,6 +562,9 @@ body {
 .parse {
   background-image: url("../styles/imgs/parse (1).jpg"); }
 
+.angular {
+  background-image: url("../styles/imgs/icon_angular.png"); }
+
 /* #skills {
   @include outer-container;
   padding: 100px 0 20px;
