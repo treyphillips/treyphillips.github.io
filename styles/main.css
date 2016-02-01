@@ -242,7 +242,6 @@ body {
   padding-top: 70px;
   padding-left: 5px;
   color: white;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 100px; }
   @media screen and (max-width: 500px) {
     .header-words {
@@ -252,7 +251,6 @@ body {
 
 .headh2 {
   color: white;
-  font-family: 'Oswald', sans-serif;
   font-size: 75px;
   padding-left: 23px; }
   @media screen and (max-width: 500px) {
@@ -266,6 +264,9 @@ body {
       padding-left: 30px; }
       .headh2:last-child {
         margin-right: 0; } }
+
+.header-words, .headh2 {
+  font-family: 'Bitter', serif; }
 
 .header a {
   text-decoration: none; }
