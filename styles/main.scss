@@ -65,7 +65,7 @@ $mobile: new-breakpoint(max-width 481px 12);
   @include media($mobile) {
     @include span-columns(12);
     text-align: left;
-    font-size: 30px;
+    font-size: 28px;
     padding-left: 20px;
  }
 }
