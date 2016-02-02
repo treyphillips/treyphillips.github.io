@@ -56,14 +56,16 @@ $mobile: new-breakpoint(max-width 481px 12);
 .headh2 {
   color: white;
   font-size: 75px;
-  // text-shadow: 1px 1px black;
-  
   padding-left: 23px;
+
+  @include media($tablet) {
+    font-size: 65px;
+  }
 
   @include media($mobile) {
     @include span-columns(12);
     text-align: left;
-    font-size: 30px;
+    font-size: 28px;
     padding-left: 20px;
  }
 }

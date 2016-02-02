@@ -243,6 +243,9 @@ html {
   color: white;
   font-size: 75px;
   padding-left: 23px; }
+  @media screen and (max-width: 768px) and (max-width: 840px) {
+    .headh2 {
+      font-size: 65px; } }
   @media screen and (max-width: 481px) {
     .headh2 {
       float: left;
@@ -250,7 +253,7 @@ html {
       margin-right: 2.35765%;
       width: 100%;
       text-align: left;
-      font-size: 30px;
+      font-size: 28px;
       padding-left: 20px; }
       .headh2:last-child {
         margin-right: 0; } }
