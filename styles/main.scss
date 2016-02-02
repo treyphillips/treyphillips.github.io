@@ -4,9 +4,9 @@
 @import 'base/base';
 @import 'neat/neat';
 
-$large: new-breakpoint(min-width 841px);
-$tablet: new-breakpoint(min-width 501px max-width 840px 8);
-$mobile: new-breakpoint(max-width 500px 4);
+// $large: new-breakpoint(min-width 841px);
+$tablet: new-breakpoint(max-width 768px max-width 840px 8);
+$mobile: new-breakpoint(max-width 481px 12);
 
 *,
 *::before,
@@ -14,20 +14,6 @@ $mobile: new-breakpoint(max-width 500px 4);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  background-color: #fff;
-  // overflow-x: hidden;
-  // overflow-y: auto;
-
-  @include media($mobile) {
-    /* color: #293f69; */
-  }
-
-  @include media($tablet) {
-    /* color: #293f69; */
-  }
 }
 
 //////////////////////Header//////////////////////
@@ -45,7 +31,7 @@ body {
   @include media($mobile) {
     /*background-color: #293f69; */
    /*  background-image: none; */
-   background-image: url('../styles/imgs/Smallerportpics/sapien.jpg');
+   // background-image: url('../styles/imgs/Smallerportpics/sapien.jpg');
     height: 700px;
   }
 }
@@ -59,9 +45,10 @@ body {
   // text-shadow: 1px 1px black;
 
   @include media($mobile) {
-    @include shift(1);
+    // @include shift(1);
     text-align: left;
     font-size: 70px;
+    padding-left: 20px;
  }
 
 }
@@ -74,10 +61,10 @@ body {
   padding-left: 23px;
 
   @include media($mobile) {
-    @include span-columns(4);
+    @include span-columns(12);
     text-align: left;
     font-size: 30px;
-    padding-left: 30px;
+    padding-left: 20px;
  }
 }
 
@@ -91,41 +78,39 @@ body {
 
 .button-div {
   padding-top: 94px;
-  // width: 500px;
-  // margin: 0 auto;
+  width: 100%;
   text-align: center;
-  @include span-columns(10);
-  @include shift(1);
+  @include span-columns(12);
+  // @include shift(1);
 
   @include media($mobile) {
-    @include span-columns(4);
+    @include span-columns(12);
     @include shift(0);
+    padding-top: 30px;
   }
 }
 
 .nav-button {
-  @include span-columns(2.5 of 10);
-  border-radius: 5px;
-  // box-shadow: 1px 1px black;
-  background-color: rgba(255, 255, 255, .8);
+  @include span-columns(3 of 12);
   height: 50px;
   text-align: center;
-  color: #402613;
+  color: #fff;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 30px;
   margin-bottom: 1px;
 
 
   @include media($mobile) {
-    @include span-columns(4 of 4);
+    @include span-columns(4 of 12);
+    @include shift(1);
   }
 }
 
 .nav-button:hover {
-  border-color: #402613;
-  background-color: rgba(255, 255, 255, .5);
+  // border-color: #402613;
+  background-color: rgba(0, 0, 0, .5);
   text-shadow: none;
-  color: #402613;
+  color: #fff;
 }
 
 //////////////////////Bio//////////////////////
@@ -139,11 +124,6 @@ body {
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 25px;
-
-  @include media($mobile) {
-    @include outer-container;
-    /* color: #293f69; */
- }
 }
 
 #bio h1 {
@@ -156,8 +136,9 @@ body {
   @include shift(2);
 
   @include media($mobile) {
-    @include span-columns(3 of 4);
+    @include span-columns(10 of 12);
     @include shift(.5);
+    text-align: left;
 
     /* color: #293f69; */
     font-size: 23px;
@@ -192,8 +173,8 @@ body {
   }
 
   @include media($mobile) {
-    @include span-columns(3.5);
-    @include shift(.25);
+    @include span-columns(10);
+    @include shift(1);
     height: 220px;
   }
 }
@@ -259,12 +240,6 @@ body {
   color: #000;
   font-size: 21px;
   font-weight: lighter;
-
-/*   @include media($mobile) {
-  @include span-columns(1);
-  @include shift(.25);
-
-} */
 }
 
 .btn-lg:hover,
@@ -309,9 +284,8 @@ body {
   }
 
   @include media($mobile) {
-    @include span-columns(.75);
-    @include shift(.85);
-    height: 45px;
+    @include span-columns(4 of 12);
+    @include shift(1.2);
   }
 }
 
@@ -377,57 +351,7 @@ body {
 .mvc {
     background-image: url("../styles/imgs/mvc-min.png");
 }
-/* #skills {
-  @include outer-container;
-  padding: 100px 0 20px;
-  height: 200px;
-  text-align: center;
-  color: #402613;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 50px;
 
-  @include media($mobile) {
-    height: 350px;
-  }
-
-  p {
-    @include span-columns(8);
-    @include shift(2);
-    padding-top: 20px;
-    padding-bottom: 40px;
-    height: 210px;
-    text-align: center;
-    font-size: 25px;
-
-    @include media($mobile) {
-      @include span-columns(2);
-      @include shift(1);
-      color: #293f69;
-      font-size: 22px;
-    }
-  }
-}
-
-#skills h1 {
-  margin: 0 auto;
-  width: 500px;
-
-  @include media($mobile) {
-    @include span-columns(4);
-    color: #293f69;
-}
-}
-
-
-.skill-div {
-  @include media($tablet) {
-    color: #402613;
-}
-
-  @include media($mobile) {
-    margin-bottom: 15px;
-}
-} */
 
 //////////////////////Contact//////////////////////
 
@@ -450,7 +374,7 @@ body {
   font-size: 35px;
 
   @include media($mobile) {
-    @include span-columns(4);
+    @include span-columns(12);
     margin-top: 20px;
   }
   }
@@ -479,13 +403,8 @@ body {
 
 #conth1 h1 {
   margin: 0 auto;
+  text-align: center;
   margin-top: 30px;
-  width: 500px;
-
-  @include media($mobile) {
-    @include span-columns(4);
-
-  }
 }
 
 #wrap {
@@ -494,15 +413,9 @@ body {
   margin-left: 0;
   width: 100%;
 
-  @include media($tablet) {
-    @include span-columns(4);
-    @include shift(2);
-    /* color: #293f69; */
-  }
-
   @include media($mobile) {
-    @include span-columns(2);
-    @include shift(1);
+    @include span-columns(12);
+    @include shift(0);
 }
 
 }
@@ -516,15 +429,7 @@ body {
   height: 120px;
   text-align: center;
   color: #402613;
-
-
-
-  @include media($mobile) {
-    margin: 0 auto;
-    width: 90px;
-    /* color: #293f69; */
-  }
-    }
+}
 
 a .fa {
   margin: auto;
@@ -535,9 +440,8 @@ a .fa {
 
   @include media($mobile) {
     font-size: 45px;
-
   }
-    }
+  }
 
   #wrap a:hover {
     background-color: #402613;
@@ -547,7 +451,7 @@ a .fa {
       /*  background-color: #293f69; */
       color: white;
     }
-    }
+  }
 
 .h1h1 {
   display: block;
@@ -558,10 +462,6 @@ a .fa {
   color: #402613;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 50px;
-
-  @include media($mobile) {
-    /* color: #293f69; */
-}
 }
 
 .h1h1 h1 {
@@ -569,7 +469,7 @@ a .fa {
   width: 500px;
 
   @include media($mobile) {
-    @include span-columns(4);
+    @include span-columns(12);
     padding: 20px;
   }
 }
